@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Shut Videos",
+  "description": "Shut all videos in all background tabs.",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts":[
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
